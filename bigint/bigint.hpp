@@ -16,12 +16,12 @@ public:
     bigint &operator+=(const bigint &other);
     bigint operator+(const bigint &other) const;
 
-    bigint operator++();
+    bigint &operator++();
     bigint operator++(int);
 
-    bigint operator<<=(unsigned int amount);
+    bigint &operator<<=(unsigned int amount);
     bigint operator<<(unsigned int amount) const;
-    bigint operator>>=(const bigint &other);
+    bigint &operator>>=(const bigint &other);
 
     bool operator<(const bigint &other) const;
     bool operator>(const bigint &other) const;

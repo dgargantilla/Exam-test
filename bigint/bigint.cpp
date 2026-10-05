@@ -31,7 +31,7 @@ bigint bigint::operator+(const bigint &other) const
 }
 
     
-bigint bigint::operator++()
+bigint &bigint::operator++()
 {
     bigint dummy(1);
     *this += dummy;
@@ -47,7 +47,7 @@ bigint bigint::operator++(int)
 }
 
     
-bigint bigint::operator<<=(unsigned int amount)
+bigint &bigint::operator<<=(unsigned int amount)
 {
     if (_big != "0" )
         _big.append(amount, '0');
@@ -61,7 +61,7 @@ bigint bigint::operator<<(unsigned int amount) const
 }
     
     
-bigint bigint::operator>>=(const bigint &other)
+bigint &bigint::operator>>=(const bigint &other)
 {
     const unsigned int size = _big.size();
     const unsigned int amount = std::atol(other._big.c_str());
